@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/tombiasz/clean-node/issues"
   },
-  "homepage": "https://github.com/tombiasz/clean-node#readme"
+  "homepage": "https://github.com/tombiasz/clean-node#readme",
+  "dependencies": {
+    "tlds": "^1.203.1"
+  }
 }
