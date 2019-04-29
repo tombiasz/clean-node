@@ -1,6 +1,6 @@
 const tlds = require('tlds');
 
-const EMAIL_HOSTNAME_REGEX = /[^@]+$/
+const EMAIL_HOSTNAME_REGEX = /[^@]+$/;
 
 class Email {
   constructor({
