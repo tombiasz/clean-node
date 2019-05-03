@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/tombiasz/clean-node#readme",
   "dependencies": {
+    "express": "^4.16.4",
     "jest": "^24.7.1",
     "tlds": "^1.203.1"
   },
