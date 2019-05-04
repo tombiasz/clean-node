@@ -1,14 +1,15 @@
 const makeConfig = require('./config');
 const makeRestServer = require('./entrypoints/rest/server');
-const ContactsRepository = require('./dataProviders/databases/contacts/ContactsRepository');
+const makeContactsRepositories = require('./dataProviders/databases/contacts');
 
 const config = makeConfig(process.env);
+const contactsRepositories = makeContactsRepositories(config.contactsDb);
 
 makeRestServer({
   config: config.restApi,
   repositories: {
     contacts: {
-      contactsRepository: new ContactsRepository(),
+      ...contactsRepositories,
     },
   },
 }).then(port => console.log(`REST Api listening on port ${port}!`));
