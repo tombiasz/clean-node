@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-app": "nodemon -r dotenv/config src/app"
+    "start-app": "nodemon -r dotenv/config src/app",
+    "start-app-dev": "nodemon --inspect -r dotenv/config src/app"
   },
   "repository": {
     "type": "git",
