@@ -4,7 +4,7 @@ const {
 } = require('../../../domain/usecases/getContact');
 const {
   ContactsRepository,
-} = require('../../../dataProviders/repositories');
+} = require('../../../dataProviders/databases/contacts');
 
 module.exports = async (req, res) => {
   const contactsRepository = new ContactsRepository();
