@@ -1,4 +1,4 @@
-const KnexRepository = require('./KnexRepositoy');
+const KnexRepository = require('./KnexRepository');
 
 class ContactsRepository extends KnexRepository {
   // eslint-disable-next-line class-methods-use-this
