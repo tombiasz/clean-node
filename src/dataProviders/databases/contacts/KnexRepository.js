@@ -1,5 +1,5 @@
 class KnexRepository {
-  constructor(knex) {
+  constructor({ knex }) {
     this.knex = knex;
   }
 }

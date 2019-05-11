@@ -1,11 +1,16 @@
 const KnexRepository = require('./KnexRepository');
 
 class ContactsRepository extends KnexRepository {
-  // eslint-disable-next-line class-methods-use-this
-  getById({ id }) {
-    return this.knex('contacts')
+  constructor({ knex, mapContactDataToEntity }) {
+    super(knex);
+    this.mapContactDataToEntity = mapContactDataToEntity;
+  }
+
+  async getById({ id }) {
+    const data = await this.knex('contacts')
       .where({ id })
       .first();
+    return this.mapContactDataToEntity(data);
   }
 }
 

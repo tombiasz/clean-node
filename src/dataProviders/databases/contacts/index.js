@@ -1,5 +1,6 @@
 const knexConnectionFactory = require('knex');
 const ContactsRepository = require('./ContactsRepository');
+const mapContactDataToEntity = require('./mappers/mapContactDataToEntity');
 
 const makeKnex = config => knexConnectionFactory({
   client: config.dbClient,
@@ -11,7 +12,7 @@ const makeKnex = config => knexConnectionFactory({
 });
 
 const makeRepositories = knex => Object.freeze({
-  contactsRepository: new ContactsRepository(knex),
+  contactsRepository: new ContactsRepository({ knex, mapContactDataToEntity }),
 });
 
 module.exports = config => makeRepositories(makeKnex(config));
