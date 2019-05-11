@@ -2,7 +2,7 @@ const KnexRepository = require('./KnexRepository');
 
 class ContactsRepository extends KnexRepository {
   constructor({ knex, mapContactDataToEntity }) {
-    super(knex);
+    super({ knex });
     this.mapContactDataToEntity = mapContactDataToEntity;
   }
 
