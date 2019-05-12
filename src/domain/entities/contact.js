@@ -15,6 +15,7 @@ class Contact {
     this.createdAt = createdAt;
     this.updatedAt = updatedAt;
     this.deletedAt = deletedAt;
+    this.emails = [];
   }
 
   get fullName() {
